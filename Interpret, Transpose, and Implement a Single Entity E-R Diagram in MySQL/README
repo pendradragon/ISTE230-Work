@@ -1,3 +1,7 @@
+#Week 2: HW 2 assignment
+
+An ER diagram w/ the following attributes was provided in the assignment
+
 Attribute(s)  |	Data type description
 itemID; itemName; name; street; city; colors  |	Variable-length string up to 25 characters
 state  |	Fixed-length string of 2 characters
@@ -6,3 +10,5 @@ cost; retailPrice  |	Variable-length string up to 10 characters
 notes; description  |	Variable-length string up to 255 characters
 returnable; perishable  |	Will store one character
 shelfQty  |	A whole number between 0 and 50000
+
+Purpose: Create a database (HW02) and table (Item) for the ER diagram and attributes that were provided
