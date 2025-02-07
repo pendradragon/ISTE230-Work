@@ -1,0 +1,36 @@
+/* Database creation syntax:
+    Obtained from W2D1ClassExample.spl */
+
+DROP DATABASE IF EXISTS HW02
+CREATE HW02
+
+USE HW02
+
+-- Creating the table
+CREATE TABLE IF NOT EXISTS Item(
+    itemID VARCHAR(25),
+    itemName VARCHAR(25),
+    name VARCHAR(25),
+    street VARCHAR(25),
+    city VARCHAR(25),
+    colors VARCHAR(25),
+
+    state CHAR(2),
+
+    zipcode VARCHAR(10),
+
+    cost VARCHAR(10),
+    retailPrice VARCHAR(10),
+
+    notes VARCHAR(255),
+    description VARCHAR(255),
+
+    returnable CHAR(1), 
+    perishable CHAR(1),
+
+    -- Row 8 from teh assignment table
+    shelfQty BIGINT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE Item
+ADD PRIMARY KEY(itemID);
