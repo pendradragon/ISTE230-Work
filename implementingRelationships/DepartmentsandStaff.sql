@@ -1,8 +1,3 @@
--- Kerstetter, Megan 
-
-CREATE DATABASE Kerstetter_PE11; 
-USE Kerstetter_PE11;
-
 CREATE TABLE DEPARTMENT(
     deptNum int AUTO_INCREMENT,
     name VARCHAR(50),
@@ -50,10 +45,6 @@ CREATE TABLE SUPPORT_STAFF(
     CONSTRAINT supportStaffID_fk FOREIGN KEY(supportStaffID) REFERENCES STAFF(staffID) --supportStaffID must be a staffID
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/* DEPARTMENT STAFF BEHAVIOR:
-    deptNum must be in DEPARTMENT(deptNum)
-    staffID must be in STAFF(staffID)
-*/
 CREATE TABLE DEPARTMENT_STAFF(
     deptNum int, 
     staffID int, 
@@ -61,10 +52,6 @@ CREATE TABLE DEPARTMENT_STAFF(
     CONSTRAINT staffID_fk FOREIGN KEY(staffID) REFERENCES STAFF(staffID), 
     CONSTRAINT dept_staff_pk PRIMARY KEY(deptNum, staffID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/* Patient silliness
-    patientID must be a personID (the entity you are looking for is called PERSON)
-    doctorID must be a doctorID */
 
 CREATE TABLE PATIENT(
     patientID int, 
